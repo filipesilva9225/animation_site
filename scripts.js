@@ -12,8 +12,8 @@ const total = items.length;
 let timer;
 
 function update(direction) {
-  documen.querySelector(".item.active").classList.remove("active");
-  documen.querySelector(".dot.active").classList.remove("active");
+  document.querySelector(".item.active").classList.remove("active");
+  document.querySelector(".dot.active").classList.remove("active");
 
   if (direction > 0) {
     active = active + 1;
@@ -30,7 +30,7 @@ function update(direction) {
   items[active].classList.add("active");
   dots[active].classList.add("active");
 
-  numberIndicator.textContent = Scring(active + 1).padStart(2, "0");
+  numberIndicator.textContent = String(active + 1).padStart(2, "0");
 }
 
 clearInterval(timer);
